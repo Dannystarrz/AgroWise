@@ -1,101 +1,184 @@
 import Image from "next/image";
+import { facebookIcon, instagramIcon, twitterIcon, youtubeIcon } from "./icons";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="max-w-screen min-h-screen">
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      <nav className="flex w-full justify-between items-center px-24 py-5 drop-shadow-md bg-white">
+        <Image src={'/logo.png'} alt="agro wise logo" height={46.22} width={157.22}/>
+
+        <div className="flex gap-14 items-center text-base">
+          <p className="text-[#FF9800] font-bold border-b border-[#FF9800]">Home</p>
+          <p className="hover:text-[#FF9800] hover:font-bold hover:border-b hover:border-[#FF9800]">Crop management</p>
+          <p className="hover:text-[#FF9800] hover:font-bold hover:border-b hover:border-[#FF9800]">Market Insights</p>
+          <p className="hover:text-[#FF9800] hover:font-bold hover:border-b hover:border-[#FF9800]">Community</p>
+          <p className="hover:text-[#FF9800] hover:font-bold hover:border-b hover:border-[#FF9800]">Weather Forecast</p>
+          <button className="bg-[#216206] text-white px-10 py-4 font-semibold hover:bg-[#133A04]">Sign Up</button>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+      </nav>
+
+      <section className="w-full h-[85.7vh] py-6">
+
+        <div className="w-full h-full relative flex flex-col gap-[4rem]">
+
+          <Image src={'/leftFarmImage.png'} alt="farm clip image on the left" width={1340} height={844}
+          className="absolute top-0 bottom-8 left-8 h-full w-[95%] z-20"
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
+          <Image src={'/rightFarmImage.png'} alt="farm clip image on the right" width={324} height={338}
+          className="absolute top-0 right-8 w-[240px] h-[214px] z-20"
           />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+
+          <h1 className="text-7xl ml-[17.75rem] font-bold mt-8">Welcome To AgroWise</h1>
+
+          <div className="flex flex-col gap-[2rem] w-full z-30">
+            <p className="text-2xl text-[#5A5F59] w-[48%] ml-[31.25rem]"> A dynamic platform dedicated to ensuring that every farmer is equipped with the knowledge needed to thrive in the ever-evolving agricultural sector.</p>
+
+            <div className="flex gap-4 ml-[48rem]">
+              <button className="border-2 border-[#216206] hover:bg-[#BBDCAD] text-lg text-[#216206] w-48 py-4 font-semibold rounded-lg">Get Started</button>
+              <button className="bg-[#216206] text-white w-48 text-lg py-4 font-semibold hover:bg-[#133A04] rounded-lg">Login</button>
+            </div>
+
+          </div>
+
+
+        </div>
+       
+      </section>
+
+      <section className="flex px-32 gap-8 mt-8 items-center">
+        <div className="w-[58%] flex flex-col gap-10">
+
+          <h2 className="text-5xl text-[#216206] text-bold">Our Mission</h2>
+
+          <div className="flex flex-col gap-4 text-justify">
+
+            <p>
+            Is to revolutionize the agricultural sector by empowering farmers with cutting-edge technology. We are dedicated to developing a sophisticated website that harnesses the power of artificial intelligence (AI) to provide farmers with unparalleled support in making informed decisions.
+            </p>
+            <p>
+            Our commitment is to create a platform that goes beyond conventional tools, offering farmers expert advice on crop management, market insights, and real-time problem-solving. 
+            </p>
+
+          </div>
+
+          <div className="flex flex-col gap-4 w-full">
+
+            <div className="flex w-full justify-between">
+
+              <div>
+
+              <p>AI Farm solutions</p>
+              </div>
+              
+              <div>
+
+              <p>Certified products</p>
+              </div>
+            </div>
+              
+            <div>
+
+              <p>Support 24/7</p>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div className="grow flex flex-col gap-6">
+          <Image src={'/first mission image.png'} alt="farmer image" width={445} height={291}/>
+          <div className="flex w-full justify-between">
+            <Image src={'/second mission image.png'} alt="farmer image 2" width={208} height={208}/>
+            <Image src={'/thirdImage.png'} alt="farmer image 3" width={208} height={208}/>
+          </div>
+        </div>
+
+      </section>
+
+      <footer className="bg-[#F9FEF6] w-full max-lg:hidden mt-16 items-center flex flex-col gap-16 px-32 pt-16">
+        <div className="flex justify-between w-full">
+          <Image src={'/logo.png'} alt="agro wise logo" height={46.22} width={157.22} className="w-[157.22px] h-[46.22px]"/>
+
+          <div className="flex gap-16">
+            <div className="flex flex-col gap-3">
+              <p className="text-base font-bold mb-2">Quick links</p>
+              <p className="font-light text-sm">
+                Home
+              </p>
+              <p className="font-light text-sm">
+               Crop
+              </p>
+              <p className="font-light text-sm">
+                Management
+              </p>
+              <p className="font-light text-sm">
+                Market Insights
+              </p>
+              <p className="font-light text-sm">
+                Community Forum
+              </p>
+              <p className="font-light text-sm">
+                Weather forecast
+              </p>
+              <p className="font-light text-sm">
+                News
+              </p>
+            </div>
+            
+            <div className="flex flex-col gap-3">
+              <p className="text-base font-bold mb-2">Product Listings</p>
+              <p className="font-light text-sm">
+                Tomatoes
+              </p>
+              <p className="font-light text-sm">
+                Mangoes
+              </p>
+              <p className="font-light text-sm">
+                Red cheries
+              </p>
+              <p className="font-light text-sm">
+                Banana
+              </p>
+              <p className="font-light text-sm">
+                Carrots
+              </p>
+             
+            </div>
+            
+            <div className="flex flex-col gap-3">
+              <p className="text-base font-bold mb-2">Contact Us</p>
+              <p className="font-light text-sm">
+                Chatbox
+              </p>
+              <p className="font-light text-sm">
+                Business inquiry: <span className="font-medium">080-459-876-7890</span>
+              </p>
+              <p className="font-light text-sm">
+                Customer care: <span className="font-medium">080-459-876-7890</span>
+              </p>
+             
+            </div>
+
+           
+            <div className="flex flex-col gap-3">
+              <p className="text-base font-bold">Social</p>
+              <div className="flex gap-4 items-center">
+                {facebookIcon} {instagramIcon} {twitterIcon} {youtubeIcon}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="flex w-4/5 border-t py-5 border-[#0D0D0D] items-center justify-center">
+
+          <p className="font-light text-sm">
+            © 2023 AgroWise | All Rights Reserved
+          </p>
+
+          
+        </div>
       </footer>
+      
     </div>
   );
 }
