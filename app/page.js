@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { facebookIcon, instagramIcon, twitterIcon, youtubeIcon } from "./icons";
+import { certified, facebookIcon, instagramIcon, solutions, support, twitterIcon, youtubeIcon } from "./icons";
 
 export default function Home() {
   return (
@@ -62,24 +62,24 @@ export default function Home() {
 
           </div>
 
-          <div className="flex flex-col gap-4 w-full">
+          <div className="flex flex-col gap-4 w-full mt-2">
 
-            <div className="flex w-full justify-between">
+            <div className="flex w-full gap-10">
 
-              <div>
-
-              <p>AI Farm solutions</p>
+              <div className="flex items-center gap-4">
+                {solutions}
+                <p className="font-normal text-xl">AI Farm solutions</p>
               </div>
               
-              <div>
-
-              <p>Certified products</p>
+              <div className="flex items-center gap-4">
+                {certified}
+                <p className="font-normal text-xl">Certified products</p>
               </div>
             </div>
               
-            <div>
-
-              <p>Support 24/7</p>
+            <div className="flex items-center gap-4">
+              {support}
+              <p className="font-normal text-xl">Support 24/7</p>
             </div>
 
           </div>
