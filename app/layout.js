@@ -11,7 +11,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`max-w-screen`}
+        className={`max-w-screen h-screen`}
       >
         {children}
       </body>

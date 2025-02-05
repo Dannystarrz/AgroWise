@@ -1,7 +1,12 @@
+'use client'
 import Image from "next/image";
 import { certified, facebookIcon, instagramIcon, solutions, support, twitterIcon, youtubeIcon } from "./icons";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+
+  const navigate = useRouter()
+
   return (
     <div className="max-w-screen min-h-screen">
 
@@ -14,7 +19,9 @@ export default function Home() {
           <p className="hover:text-[#FF9800] hover:font-bold hover:border-b hover:border-[#FF9800]">Market Insights</p>
           <p className="hover:text-[#FF9800] hover:font-bold hover:border-b hover:border-[#FF9800]">Community</p>
           <p className="hover:text-[#FF9800] hover:font-bold hover:border-b hover:border-[#FF9800]">Weather Forecast</p>
-          <button className="bg-[#216206] text-white px-10 py-4 font-semibold hover:bg-[#133A04]">Sign Up</button>
+          <button className="bg-[#216206] text-white px-10 py-4 font-semibold hover:bg-[#133A04]"
+          onClick={()=>navigate.push('/login')}
+          >Sign Up</button>
         </div>
       </nav>
 
@@ -31,12 +38,16 @@ export default function Home() {
 
           <h1 className="text-7xl ml-[17.75rem] font-bold mt-8">Welcome To AgroWise</h1>
 
-          <div className="flex flex-col gap-[2rem] w-full z-30">
+          <div className="flex flex-col gap-[1.2rem] w-full z-30">
             <p className="text-2xl text-[#5A5F59] w-[48%] ml-[31.25rem]"> A dynamic platform dedicated to ensuring that every farmer is equipped with the knowledge needed to thrive in the ever-evolving agricultural sector.</p>
 
             <div className="flex gap-4 ml-[48rem]">
-              <button className="border-2 border-[#216206] hover:bg-[#BBDCAD] text-lg text-[#216206] w-48 py-4 font-semibold rounded-lg">Get Started</button>
-              <button className="bg-[#216206] text-white w-48 text-lg py-4 font-semibold hover:bg-[#133A04] rounded-lg">Login</button>
+              <button className="border-2 border-[#216206] hover:bg-[#BBDCAD] text-lg text-[#216206] w-48 py-4 font-semibold rounded-lg"
+              onClick={()=>navigate.push('/signUp')}
+              >Get Started</button>
+              <button className="bg-[#216206] text-white w-48 text-lg py-4 font-semibold hover:bg-[#133A04] rounded-lg"
+              onClick={()=>navigate.push('/login')}
+              >Login</button>
             </div>
 
           </div>
