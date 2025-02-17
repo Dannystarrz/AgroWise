@@ -9,10 +9,10 @@ export default function page() {
 
   return (
     <div className="w-full h-full flex">
-      <div className="w-[43%] h-full bg-[url(/AgrowiseSignUpImage.png)] bg-no-repeat bg-cover bg-center rounded-ee-3xl rounded-se-3xl"></div>
-      <div className="grow flex flex-col gap-6 px-24 py-12 items-center overflow-auto">
-        <h2 className="font-bold text-2xl mt-8">Get Started Now</h2>
-        <form className="w-full px-10 py-4">
+      <div className="w-[43%] max-md:hidden h-full bg-[url(/AgrowiseSignUpImage.png)] bg-no-repeat bg-cover bg-center rounded-ee-3xl rounded-se-3xl"></div>
+      <div className="grow flex flex-col gap-6 md:px-24 px-6 md:py-12 py-8 items-center overflow-auto">
+        <h2 className="font-bold md:text-2xl text-xl md:mt-8 mt-16">Get Started Now</h2>
+        <form className="w-full md:px-10 py-4">
           <div className="flex flex-col gap-4">
             <div className="w-full">
               <label htmlFor="name"
@@ -20,7 +20,7 @@ export default function page() {
               >Name</label>
               <input
                 id="name"
-                className="w-full h-14 p-4 rounded-lg border"
+                className="w-full md:h-14 h-12 p-4 rounded-lg border"
                 placeholder="Enter your name"
               />
             </div>
@@ -30,7 +30,7 @@ export default function page() {
               >Email</label>
               <input
                 id="email"
-                className="w-full h-14 p-4 rounded-lg border"
+                className="w-full md:h-14 h-12 p-4 rounded-lg border"
                 placeholder="Enter your email"
               />
             </div>
@@ -40,7 +40,7 @@ export default function page() {
               >Password</label>
               <input
                 id="password"
-                className="w-full h-14 p-4 rounded-lg border"
+                className="w-full md:h-14 h-12 p-4 rounded-lg border"
                 placeholder="Enter your Password"
               />
             </div>
@@ -50,7 +50,7 @@ export default function page() {
               >Confirm Password</label>
               <input
                 id="confirm-password"
-                className="w-full h-14 p-4 rounded-lg border"
+                className="w-full md:h-14 h-12 p-4 rounded-lg border"
                 placeholder="Confirm your Password"
               />
             </div>
@@ -62,17 +62,17 @@ export default function page() {
               </p>
             </div>
             <button
-              className="w-full rounded-lg h-14 mt-2 text-white bg-[#216206] font-medium py-4"
+              className="w-full rounded-lg md:h-14 h-12 mt-2 text-white bg-[#216206] font-medium flex items-center justify-center max-md:text-sm"
               type="submit"
             >
               Sign Up
             </button>
           </div>
         </form>
-        <div className="w-full px-10 py-1 flex flex-col gap-6 items-center">
+        <div className="w-full md:px-10 py-1 flex flex-col gap-6 items-center">
           <p className="font-bold">OR</p>
           <button
-            className="w-full rounded-lg border font-medium py-4 flex justify-center items-center h-14 gap-2"
+            className="w-full rounded-lg border font-medium py-4 flex justify-center items-center md:h-14 h-12 gap-2"
           >
             {google}
             <p className="text-black">Sign Up with Google</p>
